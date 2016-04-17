@@ -6,4 +6,11 @@ class Land < ActiveRecord::Base
   	validates :city, presence: true
   	validates :citysearch, presence: true
   	validates :file, presence:true
+
+
+  	def self.import(file)
+	    CSV.foreach(file.path, headers: true) do |row|
+	      Land.create! row.to_hash
+	    end
+  	end
 end

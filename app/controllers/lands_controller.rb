@@ -15,6 +15,11 @@ class LandsController < ApplicationController
       	redirect_to lands_path
 	end
 
+	def import
+  		Land.import(params[:file])
+  		redirect_to lands_path, notice: "Les parcelles ont été ajoutées !!"
+  end
+
 	private
 
   	def set_land
