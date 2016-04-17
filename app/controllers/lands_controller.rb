@@ -7,6 +7,7 @@ class LandsController < ApplicationController
       		marker.lat land.latitude
       		marker.lng land.longitude
 		end
+	end
 
 	def new
 	end
@@ -22,7 +23,7 @@ class LandsController < ApplicationController
 	def import
   		Land.import(params[:file])
   		redirect_to lands_path, notice: "Les parcelles ont été ajoutées !!"
-  end
+  	end
 
 	private
 
