@@ -1,9 +1,14 @@
 class LandsController < ApplicationController
 	before_action :set_land, only: [:show, :destroy]
 	def index
-		@lands = Land.all
+    	@lands = Land.all
+    	@lands = @lands.where(citysearch: params[:citysearch]) if params["citysearch"].present?
+    	@lands = @lands.where(neighborhood: params[:neighborhood]) if params["neighborhood"].present?
+    	@lands = @lands.where("surface >= ?", params[:min_surface]) if params["min_surface"].present?
+    	@lands = @lands.where("surface <= ?", params[:max_surface]) if params["max_surface"].present?	
+	end
 
-		
+	def home
 	end
 
 	def show

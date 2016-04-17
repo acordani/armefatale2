@@ -1,0 +1,35 @@
+<div class="container">
+
+          <%= form_tag lands_path, method: :get, class: "text-center",remote: true do %>
+            <div class="filter">
+              <br>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="col-md-3">
+                    <%= label_tag "Choisissez votre ville" %><br />
+                    <%= select_tag(:citysearch,options_for_select(current_user.orders.map{ |c| [c.land.citysearch, c.land.citysearch]}, params[:citysearch]), class: "form-control") %>
+                  </div>
+                  <div class="col-md-3">
+                  <%= label_tag "Choisissez votre quartier" %><br />
+                    <%= select_tag(:neighborhood, options_for_select([], params[:neighborhood]), class:"form-control") %>
+                  </div>
+
+                  <div class="col-md-3">
+                    <%= label_tag "Surface minimum" %><br />
+                    <%= text_field_tag :min_surface, params[:min_surface], placeholder:"Ex: 250", class: "form-control"%>
+                  </div>
+
+                  <div class="col-md-3">
+                    <%= label_tag "Surface maximum" %><br />
+                    <%= text_field_tag :max_surface, params[:max_surface], placeholder:"Ex: 300", class: "form-control" %>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                  <%= submit_tag "Recherche", name: nil, class: "btn btn-primary mt-30 btn-filter" %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+</div>
