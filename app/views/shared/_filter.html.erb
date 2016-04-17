@@ -7,7 +7,7 @@
                 <div class="col-md-12">
                   <div class="col-md-3">
                     <%= label_tag "Choisissez votre ville" %><br />
-                    <%= select_tag(:citysearch,options_for_select(current_user.orders.map{ |c| [c.land.citysearch, c.land.citysearch]}, params[:citysearch]), class: "form-control") %>
+                    <%= select_tag(:citysearch,options_for_select(current_user.orders.map{ |c| [c.citysearch.name, c.citysearch.id]}, params[:citysearch]), class: "form-control") %>
                   </div>
                   <div class="col-md-3">
                   <%= label_tag "Choisissez votre quartier" %><br />
