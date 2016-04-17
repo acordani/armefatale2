@@ -6,6 +6,12 @@ class LandsController < ApplicationController
     	@lands = @lands.where(neighborhood: params[:neighborhood]) if params["neighborhood"].present?
     	@lands = @lands.where("surface >= ?", params[:min_surface]) if params["min_surface"].present?
     	@lands = @lands.where("surface <= ?", params[:max_surface]) if params["max_surface"].present?	
+
+    	respond_to do |format|
+      		format.html # index.html.erb
+      		format.json { render json: Land.all.to_json } # index.js.erb
+      		format.js {render :index}
+      	end
 	end
 
 	def home
