@@ -42,4 +42,4 @@
         </div>
       </div>
     <% end %>
-    
+    <%= js_will_paginate @posts, renderer: BootstrapPagination::Rails , :params => { :my_excluded_param => nil } %>

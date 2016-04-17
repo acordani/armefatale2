@@ -22,6 +22,10 @@ gem "geocoder"
 gem "coffee-rails"
 gem "gmaps4rails"
 
+#Paginate
+gem 'will_paginate', '~> 3.0.6'
+gem 'will_paginate-bootstrap'
+
 source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
 end
