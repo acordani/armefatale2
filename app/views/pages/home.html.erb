@@ -1,8 +1,26 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
 
-<h3>Import Lands</h3>
-<%= form_tag import_lands_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "Upload Companies" %>
-<% end %>
+	<div id="header-top">
+		<div id="photo">
+			<div class="container">
+				<h1 class="titre text-center">L'arme fatale pour votre prospection immobilière</h1>
+				<div class="mt-100 text-center">
+					<div class="navbar-wagon-item navbar-wagon-button btn">En savoir Plus</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="clients">
+		<h2 class="text-center">De nombreux clients nous font déjà confiance</h2>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-offset-1 col-md-10 text-center">
+					<%= image_tag ("logo_orpi.png") %>
+					<%= image_tag ("logo_era.png") %>
+					<%= image_tag ("logo_ladresse.png") %>
+					<%= image_tag ("logo_squarehabitat.png") %>
+					<%= image_tag ("logo_guyhoquet.png") %>
+				</div>
+			</div>
+		</div>
+	</div>
+	
