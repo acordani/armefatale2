@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   end
 
   resources :orders
+
+  match '/neighborhoods/find_by_city', to: 'neighborhoods#find_by_city', via: :get
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
