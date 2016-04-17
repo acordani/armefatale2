@@ -11,23 +11,51 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160417070220) do
+ActiveRecord::Schema.define(version: 20160417115622) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cities", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "citysearches", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "lands", force: :cascade do |t|
     t.string   "number"
     t.integer  "surface"
     t.string   "address"
-    t.string   "neighborhood"
-    t.string   "city"
-    t.string   "citysearch"
     t.float    "latitude"
     t.float    "longitude"
     t.string   "file"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "neighborhood_id"
+    t.integer  "city_id"
+    t.integer  "citysearch_id"
+  end
+
+  create_table "neighborhoods", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "city_id"
+    t.integer  "citysearch_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer  "city_id"
+    t.integer  "user_id"
+    t.integer  "citysearch_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "users", force: :cascade do |t|
