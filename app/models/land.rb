@@ -1,11 +1,15 @@
 class Land < ActiveRecord::Base
 	validates :number, presence:true
-  	validates :surface, presence: true
+  validates :surface, presence: true
  	validates :address, presence: true
-  	validates :neighborhood, presence: true
-  	validates :city, presence: true
-  	validates :citysearch, presence: true
-  	validates :file, presence:true
+  
+  validates :city_id, presence: true
+  validates :citysearch, presence: true
+  validates :file, presence:true
+
+  belongs_to :city
+  belongs_to :neighborhood
+  belongs_to :citysearch
 
   	geocoded_by :full_street_address
   	after_validation :geocode, if: :address_changed?
