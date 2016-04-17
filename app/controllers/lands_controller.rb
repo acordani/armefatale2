@@ -2,7 +2,11 @@ class LandsController < ApplicationController
 	before_action :set_land, only: [:show, :destroy]
 	def index
 		@lands = Land.all
-	end
+
+		@hash = Gmaps4rails.build_markers(@lands) do |land, marker|
+      		marker.lat land.latitude
+      		marker.lng land.longitude
+		end
 
 	def new
 	end
