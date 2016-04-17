@@ -3,6 +3,10 @@ class LandsController < ApplicationController
 	def index
 		@lands = Land.all
 
+		
+	end
+
+	def show
 		@hash = Gmaps4rails.build_markers(@lands) do |land, marker|
       		marker.lat land.latitude
       		marker.lng land.longitude
