@@ -26,6 +26,9 @@ gem "gmaps4rails"
 gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'
 
+gem 'activeadmin', github: 'activeadmin'
+gem "rails_admin"
+
 source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
 end
