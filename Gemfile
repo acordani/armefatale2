@@ -29,6 +29,9 @@ gem 'will_paginate-bootstrap'
 gem 'activeadmin', github: 'activeadmin'
 gem "rails_admin"
 
+#Mailing
+gem 'gibbon'
+
 source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
 end
