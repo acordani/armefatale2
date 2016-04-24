@@ -42,13 +42,13 @@ $(document).ready(function() {
   //   }
   // });
 
-  $('.map').hide();
-  $('.street').mouseover(function(){
-    $(this).hide();
-    $('.map').show();
-  });
-  $('.map').mouseout(function(){
-    $(this).hide();
-    $('.street').show();
-  })
+  
+  // $('.street').mouseover(function(){
+  //   $(this).hide();
+  //   $('.streetmap').show();
+  // });
+  // $('.streetmap').mouseout(function(){
+  //   $(this).hide();
+  //   $('.street').show();
+  // })
 });
