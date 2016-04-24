@@ -21,7 +21,7 @@ class Land < ActiveRecord::Base
   	end
 
   	def full_street_address
-    	[address, city].compact.join(', ')
+    	[address, city.name].compact.join(', ')
   	end
 
 
