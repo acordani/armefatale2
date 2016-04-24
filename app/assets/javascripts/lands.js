@@ -41,4 +41,14 @@ $(document).ready(function() {
   //     console.log(data);
   //   }
   // });
+
+  $('.map').hide();
+  $('.street').mouseover(function(){
+    $(this).hide();
+    $('.map').show();
+  });
+  $('.map').mouseout(function(){
+    $(this).hide();
+    $('.street').show();
+  })
 });
