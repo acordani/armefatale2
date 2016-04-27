@@ -6,7 +6,7 @@ class FollowlandsController < ApplicationController
 		@followland.land = @land
 		@followland.user = current_user
 			if @followland.save
-				redirect_to land_path(@land)
+				redirect_to land_path(@land), notice: "Votre mail a bien été envoyé au service du cadastre."
 			else
 				render:show
 			end
