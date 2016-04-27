@@ -14,4 +14,7 @@ class ContactMailer < ApplicationMailer
     	cc: ['alcordani@gmail.com', 'yannsuissa@franceimmobilier.fr']
     	)
   end
+
+  
+  
 end

@@ -9,5 +9,6 @@ class User < ActiveRecord::Base
    has_many :lands, through: :orders
    has_many :cities
    has_many :citysearches
+   has_many :followlands
 
 end

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :lands, only: [:index, :show, :destroy] do
     collection { post :import }
+    resources :followlands, only: [:create]
   end
 
   resources :orders

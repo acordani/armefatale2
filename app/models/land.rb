@@ -10,6 +10,8 @@ class Land < ActiveRecord::Base
   belongs_to :city
   belongs_to :neighborhood
   belongs_to :citysearch
+  has_many :followlands
+  
 
   	geocoded_by :full_street_address
   	after_validation :geocode, if: :address_changed?

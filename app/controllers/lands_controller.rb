@@ -18,6 +18,7 @@ class LandsController < ApplicationController
 	end
 
 	def show
+    @followland = Followland.new
 		@hash = Gmaps4rails.build_markers(@land) do |land, marker|
       		marker.lat land.latitude
       		marker.lng land.longitude
