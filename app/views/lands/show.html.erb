@@ -22,8 +22,8 @@
   </div>
   <%= simple_form_for [@land, @followland] do |f| %>
                 <div class="text-center">
-                  <%= f.text_area :comment, rows:5, placeholder: "Inserer votre commentaire ici", class: "form-control mt-20" %>
-                  <%= f.button :submit, class:"btn btn-primary" %>
+                  <%= f.hidden_field :comment %>
+                  <%= f.submit 'Relevé de propriété ?', class:"btn btn-primary" %>
                 </div>
               <% end %>
 </div>
