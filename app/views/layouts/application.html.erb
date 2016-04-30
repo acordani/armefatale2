@@ -26,17 +26,19 @@
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header"><h2 class="text-center">Connexion</h2>
+      <div class="modal-header"><h2 class="text-center"><%= image_tag("logo.png", class: "logo-modal text-center") %></h2>
+      <h2 class="text-center modal-titre"> Connectez-vous </h2>
       </div>
       <div class="modal-body">
         <%= form_for(:user, :url => session_path(:user)) do |f| %>
-          <%= f.label :email, "Adresse email:", :class=>'' %>
-          <%= f.text_field :email, :class =>"form-control", :style => "margin-bottom:25px" %>
-          <%= f.label :password, "Mot de passe:", :class=>'' %>
-          <%= f.password_field :password,:label =>"Mot de passe", :class =>"form-control", :style => "margin-bottom:25px" %>
-          <%= f.submit 'Connexion', :class =>"form-control" %>
+          <%= f.label :email, "Email:", class: '' %>
+          <%= f.text_field :email, class: "form-control", style: "margin-bottom:25px", placeholder: "johnsmith@franceimmobilier.fr" %>
+          <%= f.label :password, "Mot de passe:", class: '' %>
+          <%= f.password_field :password, label: "Mot de passe", class: "form-control", style: "margin-bottom:25px" %>
+          <%= f.submit 'Se connecter', class: "form-control btn btn-primary",style: "margin-bottom:25px" %>
           <%= f.check_box :remember_me %>
-          <%= f.label :remember_me %>
+          <%= f.label :remember_me, "Se souvenir se moi" %>
+          <br>
           <%= link_to "Mot de passe oublié ?", new_password_path(:user) %>
         <% end %>
       </div>
