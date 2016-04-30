@@ -46,7 +46,12 @@
     <% else %>
 
       <!-- Login text link -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <li>
+            <%= link_to 'Connexion', "#", data: {toggle: "modal", target: "#myModal"} %>
+          </li>
+          <li>
+            <%= link_to 'Inscription', "#", data: {toggle: "modal", target: "#myModal2"} %>
+          </li>
 
     <% end %>
 
