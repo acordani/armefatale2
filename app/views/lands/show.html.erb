@@ -50,7 +50,7 @@
       })
     <% end %>
   <% end %>
-
+<%= javascript_include_tag "https://maps.google.com/maps/api/js?sensor=false&key=AIzaSyCwCp3To_EfAyq9Yt0-x9O2KfQMU4dLRw8" %>
 <% content_for(:after_js) do %>
   <%= javascript_tag do %>
       $(document).on('ready', function() {

@@ -1,6 +1,14 @@
-Bonjour <%= @contact.name %>,
+Bonjour <strong><%= @contact.name %></strong>,
+<br>
 <br>
 Nous avons bien pris en compte votre demande, et n'allons pas tarder à vous recontacter
 <br>
 <br>
-L'équipe hypermotivée de l'arme fatale.
+Voici les informations que vous nous avez comuniquées:
+<br>
+<p>Votre mail : <%= @contact.mail %></p>
+<p>Votre telephone : <%= @contact.phone %></p>
+<!-- <p>Votre type d'agence: <%@contact.type %></p> -->
+<br>
+<br>
+L'équipe hypermotivée de <strong>l'arme fatale</strong>.

@@ -51,4 +51,9 @@ $(document).ready(function() {
   //   $(this).hide();
   //   $('.street').show();
   // })
+  // $(".streetview").hide();
+  // $(".item-show-map").on('mouseover', function(){
+  //   $(this).hide();
+  //   $(".item-show-map2").show();
+  // });
 });
