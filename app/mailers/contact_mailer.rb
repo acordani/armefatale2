@@ -11,7 +11,7 @@ class ContactMailer < ApplicationMailer
     mail(
     	to: @contact.mail, 
     	subject: "Votre demande a bien été prise en compte",
-    	cc: ['alcordani@gmail.com', 'yannsuissa@franceimmobilier.fr']
+    	cc: ['alcordani@gmail.com']
     	)
   end
 
